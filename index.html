@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Mirrored from goldenbook.site/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jan 2024 18:14:51 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+	<meta charset="UTF-8">
+	<script>if (navigator.userAgent.match(/MSIE|Internet Explorer/i) || navigator.userAgent.match(/Trident\/7\..*?rv:11/i)) { var href = document.location.href; if (!href.match(/[?&]nowprocket/)) { if (href.indexOf("?") == -1) { if (href.indexOf("#") == -1) { document.location.href = href + "?nowprocket=1" } else { document.location.href = href.replace("#", "?nowprocket=1#") } } else { if (href.indexOf("#") == -1) { document.location.href = href + "&nowprocket=1" } else { document.location.href = href.replace("#", "&nowprocket=1#") } } } }</script>
+	<script>class RocketLazyLoadScripts { constructor(e) { this.triggerEvents = e, this.eventOptions = { passive: !0 }, this.userEventListener = this.triggerListener.bind(this), this.delayedScripts = { normal: [], async: [], defer: [] }, this.allJQueries = [] } _addUserInteractionListener(e) { this.triggerEvents.forEach((t => window.addEventListener(t, e.userEventListener, e.eventOptions))) } _removeUserInteractionListener(e) { this.triggerEvents.forEach((t => window.removeEventListener(t, e.userEventListener, e.eventOptions))) } triggerListener() { this._removeUserInteractionListener(this), "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", this._loadEverythingNow.bind(this)) : this._loadEverythingNow() } async _loadEverythingNow() { this._delayEventListeners(), this._delayJQueryReady(this), this._handleDocumentWrite(), this._registerAllDelayedScripts(), this._preloadAllScripts(), await this._loadScriptsFromList(this.delayedScripts.normal), await this._loadScriptsFromList(this.delayedScripts.defer), await this._loadScriptsFromList(this.delayedScripts.async), await this._triggerDOMContentLoaded(), await this._triggerWindowLoad(), window.dispatchEvent(new Event("rocket-allScriptsLoaded")) } _registerAllDelayedScripts() { document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e => { e.hasAttribute("src") ? e.hasAttribute("async") && !1 !== e.async ? this.delayedScripts.async.push(e) : e.hasAttribute("defer") && !1 !== e.defer || "module" === e.getAttribute("data-rocket-type") ? this.delayedScripts.defer.push(e) : this.delayedScripts.normal.push(e) : this.delayedScripts.normal.push(e) })) } async _transformScript(e) { return await this._requestAnimFrame(), new Promise((t => { const n = document.createElement("script"); let r;[...e.attributes].forEach((e => { let t = e.nodeName; "type" !== t && ("data-rocket-type" === t && (t = "type", r = e.nodeValue), n.setAttribute(t, e.nodeValue)) })), e.hasAttribute("src") ? (n.addEventListener("load", t), n.addEventListener("error", t)) : (n.text = e.text, t()), e.parentNode.replaceChild(n, e) })) } async _loadScriptsFromList(e) { const t = e.shift(); return t ? (await this._transformScript(t), this._loadScriptsFromList(e)) : Promise.resolve() } _preloadAllScripts() { var e = document.createDocumentFragment();[...this.delayedScripts.normal, ...this.delayedScripts.defer, ...this.delayedScripts.async].forEach((t => { const n = t.getAttribute("src"); if (n) { const t = document.createElement("link"); t.href = n, t.rel = "preload", t.as = "script", e.appendChild(t) } })), document.head.appendChild(e) } _delayEventListeners() { let e = {}; function t(t, n) { !function (t) { function n(n) { return e[t].eventsToRewrite.indexOf(n) >= 0 ? "rocket-" + n : n } e[t] || (e[t] = { originalFunctions: { add: t.addEventListener, remove: t.removeEventListener }, eventsToRewrite: [] }, t.addEventListener = function () { arguments[0] = n(arguments[0]), e[t].originalFunctions.add.apply(t, arguments) }, t.removeEventListener = function () { arguments[0] = n(arguments[0]), e[t].originalFunctions.remove.apply(t, arguments) }) }(t), e[t].eventsToRewrite.push(n) } function n(e, t) { let n = e[t]; Object.defineProperty(e, t, { get: () => n || function () { }, set(r) { e["rocket" + t] = n = r } }) } t(document, "DOMContentLoaded"), t(window, "DOMContentLoaded"), t(window, "load"), t(window, "pageshow"), t(document, "readystatechange"), n(document, "onreadystatechange"), n(window, "onload"), n(window, "onpageshow") } _delayJQueryReady(e) { let t = window.jQuery; Object.defineProperty(window, "jQuery", { get: () => t, set(n) { if (n && n.fn && !e.allJQueries.includes(n)) { n.fn.ready = n.fn.init.prototype.ready = function (t) { e.domReadyFired ? t.bind(document)(n) : document.addEventListener("rocket-DOMContentLoaded", (() => t.bind(document)(n))) }; const t = n.fn.on; n.fn.on = n.fn.init.prototype.on = function () { if (this[0] === window) { function e(e) { return e.split(" ").map((e => "load" === e || 0 === e.indexOf("load.") ? "rocket-jquery-load" : e)).join(" ") } "string" == typeof arguments[0] || arguments[0] instanceof String ? arguments[0] = e(arguments[0]) : "object" == typeof arguments[0] && Object.keys(arguments[0]).forEach((t => { delete Object.assign(arguments[0], { [e(t)]: arguments[0][t] })[t] })) } return t.apply(this, arguments), this }, e.allJQueries.push(n) } t = n } }) } async _triggerDOMContentLoaded() { this.domReadyFired = !0, await this._requestAnimFrame(), document.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this._requestAnimFrame(), window.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this._requestAnimFrame(), document.dispatchEvent(new Event("rocket-readystatechange")), await this._requestAnimFrame(), document.rocketonreadystatechange && document.rocketonreadystatechange() } async _triggerWindowLoad() { await this._requestAnimFrame(), window.dispatchEvent(new Event("rocket-load")), await this._requestAnimFrame(), window.rocketonload && window.rocketonload(), await this._requestAnimFrame(), this.allJQueries.forEach((e => e(window).trigger("rocket-jquery-load"))), window.dispatchEvent(new Event("rocket-pageshow")), await this._requestAnimFrame(), window.rocketonpageshow && window.rocketonpageshow() } _handleDocumentWrite() { const e = new Map; document.write = document.writeln = function (t) { const n = document.currentScript, r = document.createRange(), i = n.parentElement; let o = e.get(n); void 0 === o && (o = n.nextSibling, e.set(n, o)); const a = document.createDocumentFragment(); r.setStart(a, 0), a.appendChild(r.createContextualFragment(t)), i.insertBefore(a, o) } } async _requestAnimFrame() { return new Promise((e => requestAnimationFrame(e))) } static run() { const e = new RocketLazyLoadScripts(["keydown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"]); e._addUserInteractionListener(e) } } RocketLazyLoadScripts.run();</script>
+
+	<title>Golden Book</title>
+	<link rel="stylesheet" href="wp-content/cache/min/1/14f84d85fcba849bb335128b5645dee7.css" media="all"
+		data-minify="1" />
+	<meta name='robots' content='max-image-preview:large' />
+	<link rel="alternate" type="application/rss+xml" title="Feed para Golden Book &raquo;" href="feed/index.html" />
+	<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Golden Book &raquo;"
+		href="comments/feed/index.html" />
+	<script type="rocketlazyloadscript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/goldenbook.site\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+	<style id='wp-emoji-styles-inline-css'>
+		img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 0.07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		}
+	</style>
+
+	<style id='classic-theme-styles-inline-css'>
+		/*! This file is auto-generated */
+		.wp-block-button__link {
+			color: #fff;
+			background-color: #32373c;
+			border-radius: 9999px;
+			box-shadow: none;
+			text-decoration: none;
+			padding: calc(.667em + 2px) calc(1.333em + 2px);
+			font-size: 1.125em
+		}
+
+		.wp-block-file__button {
+			background: #32373c;
+			color: #fff;
+			text-decoration: none
+		}
+	</style>
+	<style id='global-styles-inline-css'>
+		body {
+			--wp--preset--color--black: #000000;
+			--wp--preset--color--cyan-bluish-gray: #abb8c3;
+			--wp--preset--color--white: #ffffff;
+			--wp--preset--color--pale-pink: #f78da7;
+			--wp--preset--color--vivid-red: #cf2e2e;
+			--wp--preset--color--luminous-vivid-orange: #ff6900;
+			--wp--preset--color--luminous-vivid-amber: #fcb900;
+			--wp--preset--color--light-green-cyan: #7bdcb5;
+			--wp--preset--color--vivid-green-cyan: #00d084;
+			--wp--preset--color--pale-cyan-blue: #8ed1fc;
+			--wp--preset--color--vivid-cyan-blue: #0693e3;
+			--wp--preset--color--vivid-purple: #9b51e0;
+			--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+			--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+			--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+			--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+			--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+			--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+			--wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+			--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+			--wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+			--wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+			--wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+			--wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+			--wp--preset--font-size--small: 13px;
+			--wp--preset--font-size--medium: 20px;
+			--wp--preset--font-size--large: 36px;
+			--wp--preset--font-size--x-large: 42px;
+			--wp--preset--spacing--20: 0.44rem;
+			--wp--preset--spacing--30: 0.67rem;
+			--wp--preset--spacing--40: 1rem;
+			--wp--preset--spacing--50: 1.5rem;
+			--wp--preset--spacing--60: 2.25rem;
+			--wp--preset--spacing--70: 3.38rem;
+			--wp--preset--spacing--80: 5.06rem;
+			--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+			--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+			--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+			--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+			--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+		}
+
+		:where(.is-layout-flex) {
+			gap: 0.5em;
+		}
+
+		:where(.is-layout-grid) {
+			gap: 0.5em;
+		}
+
+		body .is-layout-flow>.alignleft {
+			float: left;
+			margin-inline-start: 0;
+			margin-inline-end: 2em;
+		}
+
+		body .is-layout-flow>.alignright {
+			float: right;
+			margin-inline-start: 2em;
+			margin-inline-end: 0;
+		}
+
+		body .is-layout-flow>.aligncenter {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		body .is-layout-constrained>.alignleft {
+			float: left;
+			margin-inline-start: 0;
+			margin-inline-end: 2em;
+		}
+
+		body .is-layout-constrained>.alignright {
+			float: right;
+			margin-inline-start: 2em;
+			margin-inline-end: 0;
+		}
+
+		body .is-layout-constrained>.aligncenter {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+			max-width: var(--wp--style--global--content-size);
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		body .is-layout-constrained>.alignwide {
+			max-width: var(--wp--style--global--wide-size);
+		}
+
+		body .is-layout-flex {
+			display: flex;
+		}
+
+		body .is-layout-flex {
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		body .is-layout-flex>* {
+			margin: 0;
+		}
+
+		body .is-layout-grid {
+			display: grid;
+		}
+
+		body .is-layout-grid>* {
+			margin: 0;
+		}
+
+		:where(.wp-block-columns.is-layout-flex) {
+			gap: 2em;
+		}
+
+		:where(.wp-block-columns.is-layout-grid) {
+			gap: 2em;
+		}
+
+		:where(.wp-block-post-template.is-layout-flex) {
+			gap: 1.25em;
+		}
+
+		:where(.wp-block-post-template.is-layout-grid) {
+			gap: 1.25em;
+		}
+
+		.has-black-color {
+			color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-color {
+			color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-color {
+			color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-color {
+			color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-color {
+			color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-color {
+			color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-color {
+			color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-color {
+			color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-color {
+			color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-color {
+			color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-color {
+			color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-color {
+			color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-background-color {
+			background-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-background-color {
+			background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-background-color {
+			background-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-background-color {
+			background-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-background-color {
+			background-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-background-color {
+			background-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-background-color {
+			background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-background-color {
+			background-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-border-color {
+			border-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-border-color {
+			border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-border-color {
+			border-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-border-color {
+			border-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-border-color {
+			border-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-border-color {
+			border-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-border-color {
+			border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-border-color {
+			border-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+			background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+		}
+
+		.has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+			background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+		}
+
+		.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-orange-to-vivid-red-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+		}
+
+		.has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+			background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+		}
+
+		.has-cool-to-warm-spectrum-gradient-background {
+			background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+		}
+
+		.has-blush-light-purple-gradient-background {
+			background: var(--wp--preset--gradient--blush-light-purple) !important;
+		}
+
+		.has-blush-bordeaux-gradient-background {
+			background: var(--wp--preset--gradient--blush-bordeaux) !important;
+		}
+
+		.has-luminous-dusk-gradient-background {
+			background: var(--wp--preset--gradient--luminous-dusk) !important;
+		}
+
+		.has-pale-ocean-gradient-background {
+			background: var(--wp--preset--gradient--pale-ocean) !important;
+		}
+
+		.has-electric-grass-gradient-background {
+			background: var(--wp--preset--gradient--electric-grass) !important;
+		}
+
+		.has-midnight-gradient-background {
+			background: var(--wp--preset--gradient--midnight) !important;
+		}
+
+		.has-small-font-size {
+			font-size: var(--wp--preset--font-size--small) !important;
+		}
+
+		.has-medium-font-size {
+			font-size: var(--wp--preset--font-size--medium) !important;
+		}
+
+		.has-large-font-size {
+			font-size: var(--wp--preset--font-size--large) !important;
+		}
+
+		.has-x-large-font-size {
+			font-size: var(--wp--preset--font-size--x-large) !important;
+		}
+
+		.wp-block-navigation a:where(:not(.wp-element-button)) {
+			color: inherit;
+		}
+
+		:where(.wp-block-post-template.is-layout-flex) {
+			gap: 1.25em;
+		}
+
+		:where(.wp-block-post-template.is-layout-grid) {
+			gap: 1.25em;
+		}
+
+		:where(.wp-block-columns.is-layout-flex) {
+			gap: 2em;
+		}
+
+		:where(.wp-block-columns.is-layout-grid) {
+			gap: 2em;
+		}
+
+		.wp-block-pullquote {
+			font-size: 1.5em;
+			line-height: 1.6;
+		}
+	</style>
+
+
+
+
+
+
+
+
+	<style id='rocket-lazyload-inline-css'>
+		.rll-youtube-player {
+			position: relative;
+			padding-bottom: 56.23%;
+			height: 0;
+			overflow: hidden;
+			max-width: 100%;
+		}
+
+		.rll-youtube-player:focus-within {
+			outline: 2px solid currentColor;
+			outline-offset: 5px;
+		}
+
+		.rll-youtube-player iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 100;
+			background: 0 0
+		}
+
+		.rll-youtube-player img {
+			bottom: 0;
+			display: block;
+			left: 0;
+			margin: auto;
+			max-width: 100%;
+			width: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			border: none;
+			height: auto;
+			-webkit-transition: .4s all;
+			-moz-transition: .4s all;
+			transition: .4s all
+		}
+
+		.rll-youtube-player img:hover {
+			-webkit-filter: brightness(75%)
+		}
+
+		.rll-youtube-player .play {
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+			position: absolute;
+			background: url(wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;
+			background-color: transparent !important;
+			cursor: pointer;
+			border: none;
+		}
+	</style>
+	<link rel='stylesheet' id='google-fonts-1-css'
+		href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.4.1'
+		media='all' />
+
+
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<script type="rocketlazyloadscript" src="wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1" id="jquery-core-js"
+		defer></script>
+	<script type="rocketlazyloadscript" src="wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1"
+		id="jquery-migrate-js" defer></script>
+	<link rel="https://api.w.org/" href="wp-json/index.html" />
+	<link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/9.json" />
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+	<meta name="generator" content="WordPress 6.4.1" />
+	<link rel="canonical" href="index.html" />
+	<link rel='shortlink' href='index.html' />
+	<link rel="alternate" type="application/json+oembed"
+		href="wp-json/oembed/1.0/embed10a0.json?url=http%3A%2F%2Fgoldenbook.site%2F" />
+	<link rel="alternate" type="text/xml+oembed"
+		href="wp-json/oembed/1.0/embed8d93?url=http%3A%2F%2Fgoldenbook.site%2F&amp;format=xml" />
+	<!-- Meta Pixel Code -->
+	<script type="rocketlazyloadscript">
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  '../connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '829303768492448');
+  fbq('track', 'PageView');
+</script>
+	<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=829303768492448&amp;ev=PageView&amp;noscript=1" /></noscript>
+	<!-- End Meta Pixel Code -->
+
+	<!-- Meta Pixel Code -->
+	<script type="rocketlazyloadscript">
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'../connect.facebook.net/en_US/fbevents.js');
+fbq('init', '539108411674197');
+fbq('track', 'PageView');
+</script>
+	<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=539108411674197&amp;ev=PageView&amp;noscript=1" /></noscript>
+	<!-- End Meta Pixel Code -->
+	<meta name="generator"
+		content="Elementor 3.17.3; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+	<link rel="icon" href="wp-content/uploads/2023/08/IMG_7707-150x150.jpg" sizes="32x32" />
+	<link rel="icon" href="wp-content/uploads/2023/08/IMG_7707.jpg" sizes="192x192" />
+	<link rel="apple-touch-icon" href="wp-content/uploads/2023/08/IMG_7707.jpg" />
+	<meta name="msapplication-TileImage" content="wp-content/uploads/2023/08/IMG_7707.jpg" />
+	<noscript>
+		<style id="rocket-lazyload-nojs-css">
+			.rll-youtube-player,
+			[data-lazy-src] {
+				display: none !important;
+			}
+		</style>
+	</noscript>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+</head>
+
+<body
+	class="home page-template page-template-elementor_canvas page page-id-9 elementor-default elementor-template-canvas elementor-kit-5 elementor-page elementor-page-9">
+	<div data-elementor-type="wp-page" data-elementor-id="9" class="elementor elementor-9">
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-aa0cb68 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle"
+			data-id="aa0cb68" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ac717b0"
+					data-id="ac717b0" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4cc24c9 elementor-widget elementor-widget-heading"
+							data-id="4cc24c9" data-element_type="widget" data-widget_type="heading.default">
+							<div class="elementor-widget-container">
+								<style>
+									/*! elementor - v3.17.0 - 08-11-2023 */
+									.elementor-heading-title {
+										padding: 0;
+										margin: 0;
+										line-height: 1
+									}
+
+									.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
+										color: inherit;
+										font-size: inherit;
+										line-height: inherit
+									}
+
+									.elementor-widget-heading .elementor-heading-title.elementor-size-small {
+										font-size: 15px
+									}
+
+									.elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+										font-size: 19px
+									}
+
+									.elementor-widget-heading .elementor-heading-title.elementor-size-large {
+										font-size: 29px
+									}
+
+									.elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+										font-size: 39px
+									}
+
+									.elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+										font-size: 59px
+									}
+								</style>
+								<h2 class="elementor-heading-title elementor-size-default">Descubrí el <span
+										style="color: #ffce81">método simple</span> que <span
+										style="color: #ffce81">personas comunes</span> están aplicando para <span
+										style="color: #ffce81">ganar dinero con internet</span> usando apenas tu
+									celular. <span style="color: #ffce81">Finalmente llegó a uruguay!</span></h2>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-11c9a1e elementor-widget elementor-widget-text-editor"
+							data-id="11c9a1e" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<style>
+									/*! elementor - v3.17.0 - 08-11-2023 */
+									.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
+										background-color: #69727d;
+										color: #fff
+									}
+
+									.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap {
+										color: #69727d;
+										border: 3px solid;
+										background-color: transparent
+									}
+
+									.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap {
+										margin-top: 8px
+									}
+
+									.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter {
+										width: 1em;
+										height: 1em
+									}
+
+									.elementor-widget-text-editor .elementor-drop-cap {
+										float: left;
+										text-align: center;
+										line-height: 1;
+										font-size: 50px
+									}
+
+									.elementor-widget-text-editor .elementor-drop-cap-letter {
+										display: inline-block
+									}
+								</style>
+								<p><span style="font-weight: 400;">En menos de 5 minutos te voy a revelar lo que hice
+										para salir de depender de mi madre a conquistar mi Libertad financiera y tu
+										estas a un paso de conquistar lo mismo.</span></p>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-65666e7 elementor-mobile-align-center elementor-hidden-mobile elementor-widget elementor-widget-button"
+							data-id="65666e7" data-element_type="widget" data-widget_type="button.default">
+							<div class="elementor-widget-container">
+								<div class="elementor-button-wrapper">
+									<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
+										href="https://pay.hotmart.com/M83371798C">
+										<span class="elementor-button-content-wrapper">
+											<span class="elementor-button-text">QUIERO DESCUBRIR</span>
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3790c48"
+					data-id="3790c48" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-61fb01c elementor-widget elementor-widget-panda-video"
+							data-id="61fb01c" data-element_type="widget" data-widget_type="panda-video.default">
+							<div class="elementor-widget-container" style="height: 460px;">
+								<iframe id="panda-2eaa0129-2725-4a1d-9119-9e65b8198b62" style="height: 100%;" src="https://player-vz-a120224f-387.tv.pandavideo.com.br/embed/?v=2eaa0129-2725-4a1d-9119-9e65b8198b62&amp;controls=play-large,rewind,play,fast-forward,volume,settings,pip,fullscreen&amp;color=%23FFCE817A&amp;controlsColor=%23FFFFFF&amp;autoplay=true&amp;smartAutoplay=false&amp;pandaBranding=false&amp;saveProgress=false&amp;saveProgressScreen=false&amp;saveProgressTitle=false&amp;saveProgressBackgroundOpacity=false&amp;saveProgressButton1Title=false&amp;saveProgressButton2Title=false&amp;mutedIndicatorIcon=true&amp;mutedIndicatorAnimation=impact&amp;mutedIndicatorLoop=false&amp;mutedIndicatorLoopDuration=false&amp;mutedIndicatorTextTop=Clique%20aqui&amp;mutedIndicatorTextBottom=para%20ativar%20o%20som&amp;mutedIndicatorTextColor=&amp;mutedIndicatorBackgroundColor=&amp;disableForward=false&amp;hideControlsOnStart=false&amp;playOpensFullscreen=false&amp;playOpensFullscreenNative=false&amp;alternativeProgress=false&amp;alternativeProgressDefaultVelocity=false&amp;alternativeProgressVelocity=false&amp;alternativeProgress2xLimit=false&amp;alternativeProgressHeight=false&amp;disablePause=false&amp;bigPlayButtonSize=88&amp;bigPlayButtonIconSize=50.285714285714285" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen="true" fetchpriority="high"></iframe>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-2eb06a9 elementor-mobile-align-center elementor-hidden-desktop elementor-widget elementor-widget-button"
+							data-id="2eb06a9" data-element_type="widget" data-widget_type="button.default">
+							<div class="elementor-widget-container">
+								<div class="elementor-button-wrapper">
+									<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
+										href="https://pay.hotmart.com/M83371798C">
+										<span class="elementor-button-content-wrapper">
+											<span class="elementor-button-text">QUIERO DESCUBRIR</span>
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-eea2a3b elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+			data-id="eea2a3b" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fdfba82"
+					data-id="fdfba82" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-e2dea76 elementor-widget elementor-widget-text-editor"
+							data-id="e2dea76" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p><span style="font-weight: 400;">El e-book que más transformó vidas en Brasil <span
+											style="color: #ffce81;">llego a uruguay!</span></span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-113ba01 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle"
+			data-id="113ba01" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7a18fac"
+					data-id="7a18fac" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-6385dca elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+							data-id="6385dca" data-element_type="section">
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2420185"
+									data-id="2420185" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-84d478e elementor-widget elementor-widget-image"
+											data-id="84d478e" data-element_type="widget"
+											data-widget_type="image.default">
+											<div class="elementor-widget-container">
+												<style>
+													/*! elementor - v3.17.0 - 08-11-2023 */
+													.elementor-widget-image {
+														text-align: center
+													}
+
+													.elementor-widget-image a {
+														display: inline-block
+													}
+
+													.elementor-widget-image a img[src$=".svg"] {
+														width: 48px
+													}
+
+													.elementor-widget-image img {
+														vertical-align: middle;
+														display: inline-block
+													}
+												</style> <img fetchpriority="high" decoding="async" width="7000"
+													height="4520"
+													src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%207000%204520'%3E%3C/svg%3E"
+													class="attachment-full size-full wp-image-160" alt=""
+													data-lazy-srcset="http://goldenbook.site/wp-content/uploads/2023/08/mockup-pronto.png 7000w, http://goldenbook.site/wp-content/uploads/2023/08/mockup-pronto-300x194.png 300w, http://goldenbook.site/wp-content/uploads/2023/08/mockup-pronto-1024x661.png 1024w, http://goldenbook.site/wp-content/uploads/2023/08/mockup-pronto-768x496.png 768w, http://goldenbook.site/wp-content/uploads/2023/08/mockup-pronto-1536x992.png 1536w, http://goldenbook.site/wp-content/uploads/2023/08/mockup-pronto-2048x1322.png 2048w"
+													data-lazy-sizes="(max-width: 7000px) 100vw, 7000px"
+													data-lazy-src="http://goldenbook.site/wp-content/uploads/2023/08/mockup-pronto.png" /><noscript><img
+														fetchpriority="high" decoding="async" width="7000" height="4520"
+														src="wp-content/uploads/2023/08/mockup-pronto.png"
+														class="attachment-full size-full wp-image-160" alt=""
+														srcset="http://goldenbook.site/wp-content/uploads/2023/08/mockup-pronto.png 7000w, http://goldenbook.site/wp-content/uploads/2023/08/mockup-pronto-300x194.png 300w, http://goldenbook.site/wp-content/uploads/2023/08/mockup-pronto-1024x661.png 1024w, http://goldenbook.site/wp-content/uploads/2023/08/mockup-pronto-768x496.png 768w, http://goldenbook.site/wp-content/uploads/2023/08/mockup-pronto-1536x992.png 1536w, http://goldenbook.site/wp-content/uploads/2023/08/mockup-pronto-2048x1322.png 2048w"
+														sizes="(max-width: 7000px) 100vw, 7000px" /></noscript>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7f6a57f"
+									data-id="7f6a57f" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-4bafa26 elementor-widget elementor-widget-heading"
+											data-id="4bafa26" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">Ten acesso al
+													e-book mas completo del mercado! </h2>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-9caac75 elementor-widget elementor-widget-text-editor"
+											data-id="9caac75" data-element_type="widget"
+											data-widget_type="text-editor.default">
+											<div class="elementor-widget-container">
+												<p><span style="font-weight: 400;">El Golden Book reúne todas lãs
+														técnicas que aprendi durante los últimos anos que me hicieron
+														facturar más <span style="color: #ffce81;">de 50 millones de
+															pesos</span> trabajando de mi casa, apenas usando
+														internet.</span></p>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-998a669 elementor-widget elementor-widget-text-editor"
+											data-id="998a669" data-element_type="widget"
+											data-widget_type="text-editor.default">
+											<div class="elementor-widget-container">
+												<p><span style="font-weight: 400;">Las mismas estrategias que más de 100
+														mil alumnos ya probaron y validaron.</span></p>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-f55ab1e elementor-widget elementor-widget-text-editor"
+											data-id="f55ab1e" data-element_type="widget"
+											data-widget_type="text-editor.default">
+											<div class="elementor-widget-container">
+												<p><span style="font-weight: 400; color: #ffce81;">Todo ló que precisas
+														es copiar y pegar.</span></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-9755d5a elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+							data-id="9755d5a" data-element_type="section">
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-ebeb775"
+									data-id="ebeb775" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-79937a7 elementor-widget elementor-widget-heading"
+											data-id="79937a7" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">Un método
+													simple y completo, hecho para vos que:</h2>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-eb850b9"
+									data-id="eb850b9" data-element_type="column">
+									<div class="elementor-widget-wrap">
+									</div>
+								</div>
+							</div>
+						</section>
+						<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-7b4b800 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+							data-id="7b4b800" data-element_type="section">
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-22629ee"
+									data-id="22629ee" data-element_type="column"
+									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-2292a02 elementor-widget elementor-widget-text-editor"
+											data-id="2292a02" data-element_type="widget"
+											data-widget_type="text-editor.default">
+											<div class="elementor-widget-container">
+												<p><span style="font-weight: 400;">Sos un iniciante en Marketing digital
+														y no tenes experiencia</span></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-dd17c51"
+									data-id="dd17c51" data-element_type="column"
+									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-481c11f elementor-widget elementor-widget-text-editor"
+											data-id="481c11f" data-element_type="widget"
+											data-widget_type="text-editor.default">
+											<div class="elementor-widget-container">
+												<p><span style="font-weight: 400;">Ya intentaste algún otro método y no
+														tuviste resultados</span></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-7ac0a34"
+									data-id="7ac0a34" data-element_type="column"
+									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-d7bba87 elementor-widget elementor-widget-text-editor"
+											data-id="d7bba87" data-element_type="widget"
+											data-widget_type="text-editor.default">
+											<div class="elementor-widget-container">
+												<p><span style="font-weight: 400;">Precisas de una renta extra para
+														ayudar en casa y queres alcanzar la tan soñada independencia
+														financiera</span></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-f8573ca elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+							data-id="f8573ca" data-element_type="section">
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-ed2500d"
+									data-id="ed2500d" data-element_type="column"
+									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-3352544 elementor-widget elementor-widget-text-editor"
+											data-id="3352544" data-element_type="widget"
+											data-widget_type="text-editor.default">
+											<div class="elementor-widget-container">
+												<p><span style="font-weight: 400;">no tenes mucho tiempo para estudiar
+														pronto rutina de trabajo, estudios, casa y familia </span></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-cf4da22"
+									data-id="cf4da22" data-element_type="column"
+									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-280253a elementor-widget elementor-widget-text-editor"
+											data-id="280253a" data-element_type="widget"
+											data-widget_type="text-editor.default">
+											<div class="elementor-widget-container">
+												<p><span style="font-weight: 400;">Ya conseguiste tus primeras ventas
+														como afiliado, pero estás estancado y queres aumentar tus
+														resultado</span></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-040d83c"
+									data-id="040d83c" data-element_type="column"
+									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+									<div class="elementor-widget-wrap">
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-7c49610 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle"
+			data-id="7c49610" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-d41ebe1"
+					data-id="d41ebe1" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-aaf0573 elementor-widget elementor-widget-heading"
+							data-id="aaf0573" data-element_type="widget" data-widget_type="heading.default">
+							<div class="elementor-widget-container">
+								<h2 class="elementor-heading-title elementor-size-default">Quien soy y como te voy
+									ayudar a destrabar tu vida financiera?</h2>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-9e89646 elementor-widget elementor-widget-text-editor"
+							data-id="9e89646" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p><span style="font-weight: 400;">Placer, mi nombre es Juan y hoy, a los 23 años, ya
+										facture muchos millones de reales con el mercado digital, trabajé en los
+										bastidores de inúmeros lanzamientos que fueron 7 en 1, más de 1 millon de reales
+										con un producto propio y también más de un millon y medio de reales líquidos
+										como afiliado.</span></p>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-c34995f elementor-widget elementor-widget-text-editor"
+							data-id="c34995f" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p><strong>Lo que vivo puede parecer distante para la gran mayoría de los uruguayos,
+										pero no siempre fue así.</strong></p>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-a66a2ed elementor-widget elementor-widget-text-editor"
+							data-id="a66a2ed" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p><span style="font-weight: 400;">A mis 14 años, me fui de mi casa en busca de un sueño
+										para cambiar mi realidad financiera y la de mi familia. Me fui a Montevideo
+										solito a intentar realizar mi sueño de ser jugador de fútbol profesional. Donde
+										me fue muy bien, <strong><span style="color: #ffce81;">de los 13 hasta los 19
+												estuve en Peñarol</span></strong>, pasando por selecciones juveniles y
+										después miss últimos años fueron en Boston River.</span></p>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-3bb4912 elementor-widget elementor-widget-text-editor"
+							data-id="3bb4912" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p><span style="font-weight: 400;">A mis 20 años. Estaba jugando en 3ra división. Ganaba
+										20 mil pesos por mes, 18 mil pesos gastaba en alquiler y comida para vivir en
+										Montevideo. Antes de cumplir los 21 decidí dejar ese sueño de lado que cada vez
+										lo veía más distante y me empecé a preocupar cada vez más con mi futuro y el de
+										mi familia, después de estar 3 meses en la casa de mi madre y depender de ella
+										para todo, mi novia tuvo la idea de empezar a trabajar con el mercado digital,
+										al principio no creía que eso fuera posible… pero después que la vi ganando
+										dinero como afiliado usando apenas el celular e internet.</span></p>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-d82059d elementor-widget elementor-widget-text-editor"
+							data-id="d82059d" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p><span style="font-weight: 400;"><strong>Gime consiguió facturar más de 70 mil pesos
+											en su primer mes de experiencia, entonces empezamos a trabajar
+											juntos.</strong> </span></p>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-4e25b8c elementor-widget elementor-widget-text-editor"
+							data-id="4e25b8c" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p><span style="font-weight: 400;">En nuestro primer año de experiencia, 2021
+										conseguimos facturar más de 1 millon y medio de reales líquidos! Y después de
+										muchos pedidos, decidimos llevar este método a Uruguay, que nos cambió la vida
+										por completo para ayudar al máximo de personas a alcanzar la tan soñada Libertad
+										financiera.</span></p>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-0515981 elementor-widget elementor-widget-text-editor"
+							data-id="0515981" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p><strong>Si yo, una persona común que ya creyó que sólo tendría una vida estable con
+										facultad consiguió llegar hasta acá, vos también conseguís.</strong></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-dbdb783"
+					data-id="dbdb783" data-element_type="column">
+					<div class="elementor-widget-wrap">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-3fbb5eb elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle"
+			data-id="3fbb5eb" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b1a3574"
+					data-id="b1a3574" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-6912125 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+							data-id="6912125" data-element_type="section">
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-81d98f5"
+									data-id="81d98f5" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-c43ea25 elementor-widget elementor-widget-heading"
+											data-id="c43ea25" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">Como funciona
+													el Golden Book?</h2>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-66e342d elementor-widget elementor-widget-text-editor"
+											data-id="66e342d" data-element_type="widget"
+											data-widget_type="text-editor.default">
+											<div class="elementor-widget-container">
+												<p><span style="font-weight: 400;">Vas recibir todo el paso a paso
+														práctico, de lo básico a lo más avanzado . Con estrategias
+														validadas  para aplicar hoy mismo y hacer ventas como afiliado,
+														ganando una renta extra de pronto menos <strong><span
+																style="color: #ffce81;">510 dólares por
+																mes</span></strong>, pudiendo escalar tus gamos para
+														<strong><span style="color: #ffce81;">1.000, 2.000 dólares
+																mensuales.</span></strong></span></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d41c952"
+									data-id="d41c952" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-13e89e6 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+											data-id="13e89e6" data-element_type="widget"
+											data-widget_type="divider.default">
+											<div class="elementor-widget-container">
+												<style>
+													/*! elementor - v3.17.0 - 08-11-2023 */
+													.elementor-widget-divider {
+														--divider-border-style: none;
+														--divider-border-width: 1px;
+														--divider-color: #0c0d0e;
+														--divider-icon-size: 20px;
+														--divider-element-spacing: 10px;
+														--divider-pattern-height: 24px;
+														--divider-pattern-size: 20px;
+														--divider-pattern-url: none;
+														--divider-pattern-repeat: repeat-x
+													}
+
+													.elementor-widget-divider .elementor-divider {
+														display: flex
+													}
+
+													.elementor-widget-divider .elementor-divider__text {
+														font-size: 15px;
+														line-height: 1;
+														max-width: 95%
+													}
+
+													.elementor-widget-divider .elementor-divider__element {
+														margin: 0 var(--divider-element-spacing);
+														flex-shrink: 0
+													}
+
+													.elementor-widget-divider .elementor-icon {
+														font-size: var(--divider-icon-size)
+													}
+
+													.elementor-widget-divider .elementor-divider-separator {
+														display: flex;
+														margin: 0;
+														direction: ltr
+													}
+
+													.elementor-widget-divider--view-line_icon .elementor-divider-separator,
+													.elementor-widget-divider--view-line_text .elementor-divider-separator {
+														align-items: center
+													}
+
+													.elementor-widget-divider--view-line_icon .elementor-divider-separator:after,
+													.elementor-widget-divider--view-line_icon .elementor-divider-separator:before,
+													.elementor-widget-divider--view-line_text .elementor-divider-separator:after,
+													.elementor-widget-divider--view-line_text .elementor-divider-separator:before {
+														display: block;
+														content: "";
+														border-bottom: 0;
+														flex-grow: 1;
+														border-top: var(--divider-border-width) var(--divider-border-style) var(--divider-color)
+													}
+
+													.elementor-widget-divider--element-align-left .elementor-divider .elementor-divider-separator>.elementor-divider__svg:first-of-type {
+														flex-grow: 0;
+														flex-shrink: 100
+													}
+
+													.elementor-widget-divider--element-align-left .elementor-divider-separator:before {
+														content: none
+													}
+
+													.elementor-widget-divider--element-align-left .elementor-divider__element {
+														margin-left: 0
+													}
+
+													.elementor-widget-divider--element-align-right .elementor-divider .elementor-divider-separator>.elementor-divider__svg:last-of-type {
+														flex-grow: 0;
+														flex-shrink: 100
+													}
+
+													.elementor-widget-divider--element-align-right .elementor-divider-separator:after {
+														content: none
+													}
+
+													.elementor-widget-divider--element-align-right .elementor-divider__element {
+														margin-right: 0
+													}
+
+													.elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator {
+														border-top: var(--divider-border-width) var(--divider-border-style) var(--divider-color)
+													}
+
+													.elementor-widget-divider--separator-type-pattern {
+														--divider-border-style: none
+													}
+
+													.elementor-widget-divider--separator-type-pattern.elementor-widget-divider--view-line .elementor-divider-separator,
+													.elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:after,
+													.elementor-widget-divider--separator-type-pattern:not(.elementor-widget-divider--view-line) .elementor-divider-separator:before,
+													.elementor-widget-divider--separator-type-pattern:not([class*=elementor-widget-divider--view]) .elementor-divider-separator {
+														width: 100%;
+														min-height: var(--divider-pattern-height);
+														-webkit-mask-size: var(--divider-pattern-size) 100%;
+														mask-size: var(--divider-pattern-size) 100%;
+														-webkit-mask-repeat: var(--divider-pattern-repeat);
+														mask-repeat: var(--divider-pattern-repeat);
+														background-color: var(--divider-color);
+														-webkit-mask-image: var(--divider-pattern-url);
+														mask-image: var(--divider-pattern-url)
+													}
+
+													.elementor-widget-divider--no-spacing {
+														--divider-pattern-size: auto
+													}
+
+													.elementor-widget-divider--bg-round {
+														--divider-pattern-repeat: round
+													}
+
+													.rtl .elementor-widget-divider .elementor-divider__text {
+														direction: rtl
+													}
+
+													.e-con-inner>.elementor-widget-divider,
+													.e-con>.elementor-widget-divider {
+														width: var(--container-widget-width, 100%);
+														--flex-grow: var(--container-widget-flex-grow)
+													}
+												</style>
+												<div class="elementor-divider">
+													<span class="elementor-divider-separator">
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-00fe305 elementor-widget elementor-widget-text-editor"
+											data-id="00fe305" data-element_type="widget"
+											data-widget_type="text-editor.default">
+											<div class="elementor-widget-container">
+												<p><span style="font-weight: 400;">Con estrategias validadas para copiar
+														y pegar que funcionan, sin precisas invertir dinero en anuncios
+														ni precisar aparecer. </span></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-01ab8ec elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle"
+			data-id="01ab8ec" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2fa5649"
+					data-id="2fa5649" data-element_type="column">
+					<div class="elementor-widget-wrap">
+					</div>
+				</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-a1da68c"
+					data-id="a1da68c" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-89d6aa5 elementor-widget elementor-widget-heading"
+							data-id="89d6aa5" data-element_type="widget" data-widget_type="heading.default">
+							<div class="elementor-widget-container">
+								<h2 class="elementor-heading-title elementor-size-default">Soporte Premium </h2>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-6486175 elementor-widget elementor-widget-heading"
+							data-id="6486175" data-element_type="widget" data-widget_type="heading.default">
+							<div class="elementor-widget-container">
+								<h2 class="elementor-heading-title elementor-size-default">Obviamente no te iba dejar de
+									ayudar!! El soporte será directamente comigo de forma individual!</h2>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-fd866fa elementor-widget elementor-widget-text-editor"
+							data-id="fd866fa" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p><span style="font-weight: 400;">Además de recibir todo el material con las
+										estrategias, tendrás acesso a mi soporte individual para sacarte todas las
+										dudas, para que tengas resultados lo más rápido posible.</span></p>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-3f2bac9 elementor-widget elementor-widget-text-editor"
+							data-id="3f2bac9" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p><span style="font-weight: 400;">Tendrás contacto directamente conmigo, eso mismo.
+										Este es uno de los únicos eméticos del mercado digital, donde tenes contacto
+										directo  con el productor. Yo estoy para ayudarte todos los días en el
+										soporte.</span></p>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-91bee4a elementor-widget elementor-widget-text-editor"
+							data-id="91bee4a" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p><span style="font-weight: 400;">Todo eso tornará prácticamente imposible que no
+										tengas resultados.</span></p>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-bdd3847 elementor-mobile-align-center elementor-widget elementor-widget-button"
+							data-id="bdd3847" data-element_type="widget" data-widget_type="button.default">
+							<div class="elementor-widget-container">
+								<div class="elementor-button-wrapper">
+									<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
+										href="https://pay.hotmart.com/M83371798C">
+										<span class="elementor-button-content-wrapper">
+											<span class="elementor-button-text">QUIERO EMPEZAR AHORA</span>
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-f7b6ac5 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle"
+			data-id="f7b6ac5" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8d0b656"
+					data-id="8d0b656" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-31a361a elementor-widget elementor-widget-heading"
+							data-id="31a361a" data-element_type="widget" data-widget_type="heading.default">
+							<div class="elementor-widget-container">
+								<h2 class="elementor-heading-title elementor-size-default">Ya hay muchos uruguayos
+									ganando dinero aplicando las estrategias que enseño!</h2>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-9c234c5 elementor-arrows-position-outside elementor-widget__width-initial elementor-pagination-position-outside elementor-widget elementor-widget-image-carousel"
+							data-id="9c234c5" data-element_type="widget"
+							data-settings="{&quot;slides_to_show&quot;:&quot;4&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;autoplay_speed&quot;:900,&quot;speed&quot;:800,&quot;navigation&quot;:&quot;both&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
+							data-widget_type="image-carousel.default">
+							<div class="elementor-widget-container">
+								<style>
+									/*! elementor - v3.17.0 - 08-11-2023 */
+									.elementor-widget-image-carousel .swiper,
+									.elementor-widget-image-carousel .swiper-container {
+										position: static
+									}
+
+									.elementor-widget-image-carousel .swiper-container .swiper-slide figure,
+									.elementor-widget-image-carousel .swiper .swiper-slide figure {
+										line-height: inherit
+									}
+
+									.elementor-widget-image-carousel .swiper-slide {
+										text-align: center
+									}
+
+									.elementor-image-carousel-wrapper:not(.swiper-container-initialized):not(.swiper-initialized) .swiper-slide {
+										max-width: calc(100% / var(--e-image-carousel-slides-to-show, 3))
+									}
+								</style>
+								<div class="elementor-image-carousel-wrapper swiper" dir="ltr">
+									<div class="elementor-image-carousel swiper-wrapper" aria-live="off">
+										<div class="swiper-slide" role="group" aria-roledescription="slide"
+											aria-label="1 of 10">
+											<figure class="swiper-slide-inner"><img width="450" height="750"
+													decoding="async" class="swiper-slide-image"
+													src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20750'%3E%3C/svg%3E"
+													alt="f1.1"
+													data-lazy-src="http://goldenbook.site/wp-content/uploads/2023/08/f1.1-1.jpg" /><noscript><img
+														width="450" height="750" decoding="async"
+														class="swiper-slide-image"
+														src="wp-content/uploads/2023/08/f1.1-1.jpg"
+														alt="f1.1" /></noscript></figure>
+										</div>
+										<div class="swiper-slide" role="group" aria-roledescription="slide"
+											aria-label="2 of 10">
+											<figure class="swiper-slide-inner"><img width="450" height="750"
+													decoding="async" class="swiper-slide-image"
+													src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20750'%3E%3C/svg%3E"
+													alt="f2"
+													data-lazy-src="http://goldenbook.site/wp-content/uploads/2023/08/f2.jpg" /><noscript><img
+														width="450" height="750" decoding="async"
+														class="swiper-slide-image"
+														src="wp-content/uploads/2023/08/f2.jpg" alt="f2" /></noscript>
+											</figure>
+										</div>
+										<div class="swiper-slide" role="group" aria-roledescription="slide"
+											aria-label="3 of 10">
+											<figure class="swiper-slide-inner"><img width="450" height="750"
+													decoding="async" class="swiper-slide-image"
+													src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20750'%3E%3C/svg%3E"
+													alt="f3"
+													data-lazy-src="http://goldenbook.site/wp-content/uploads/2023/08/f3.jpg" /><noscript><img
+														width="450" height="750" decoding="async"
+														class="swiper-slide-image"
+														src="wp-content/uploads/2023/08/f3.jpg" alt="f3" /></noscript>
+											</figure>
+										</div>
+										<div class="swiper-slide" role="group" aria-roledescription="slide"
+											aria-label="4 of 10">
+											<figure class="swiper-slide-inner"><img width="450" height="750"
+													decoding="async" class="swiper-slide-image"
+													src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20750'%3E%3C/svg%3E"
+													alt="f4"
+													data-lazy-src="http://goldenbook.site/wp-content/uploads/2023/08/f4.jpg" /><noscript><img
+														width="450" height="750" decoding="async"
+														class="swiper-slide-image"
+														src="wp-content/uploads/2023/08/f4.jpg" alt="f4" /></noscript>
+											</figure>
+										</div>
+										<div class="swiper-slide" role="group" aria-roledescription="slide"
+											aria-label="5 of 10">
+											<figure class="swiper-slide-inner"><img width="450" height="750"
+													decoding="async" class="swiper-slide-image"
+													src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20750'%3E%3C/svg%3E"
+													alt="f5"
+													data-lazy-src="http://goldenbook.site/wp-content/uploads/2023/08/f5.jpg" /><noscript><img
+														width="450" height="750" decoding="async"
+														class="swiper-slide-image"
+														src="wp-content/uploads/2023/08/f5.jpg" alt="f5" /></noscript>
+											</figure>
+										</div>
+										<div class="swiper-slide" role="group" aria-roledescription="slide"
+											aria-label="6 of 10">
+											<figure class="swiper-slide-inner"><img width="450" height="750"
+													decoding="async" class="swiper-slide-image"
+													src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20750'%3E%3C/svg%3E"
+													alt="f6"
+													data-lazy-src="http://goldenbook.site/wp-content/uploads/2023/08/f6.jpg" /><noscript><img
+														width="450" height="750" decoding="async"
+														class="swiper-slide-image"
+														src="wp-content/uploads/2023/08/f6.jpg" alt="f6" /></noscript>
+											</figure>
+										</div>
+										<div class="swiper-slide" role="group" aria-roledescription="slide"
+											aria-label="7 of 10">
+											<figure class="swiper-slide-inner"><img width="450" height="750"
+													decoding="async" class="swiper-slide-image"
+													src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20750'%3E%3C/svg%3E"
+													alt="f7"
+													data-lazy-src="http://goldenbook.site/wp-content/uploads/2023/08/f7.jpg" /><noscript><img
+														width="450" height="750" decoding="async"
+														class="swiper-slide-image"
+														src="wp-content/uploads/2023/08/f7.jpg" alt="f7" /></noscript>
+											</figure>
+										</div>
+										<div class="swiper-slide" role="group" aria-roledescription="slide"
+											aria-label="8 of 10">
+											<figure class="swiper-slide-inner"><img width="450" height="750"
+													decoding="async" class="swiper-slide-image"
+													src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20750'%3E%3C/svg%3E"
+													alt="f8"
+													data-lazy-src="http://goldenbook.site/wp-content/uploads/2023/08/f8.jpg" /><noscript><img
+														width="450" height="750" decoding="async"
+														class="swiper-slide-image"
+														src="wp-content/uploads/2023/08/f8.jpg" alt="f8" /></noscript>
+											</figure>
+										</div>
+										<div class="swiper-slide" role="group" aria-roledescription="slide"
+											aria-label="9 of 10">
+											<figure class="swiper-slide-inner"><img width="450" height="750"
+													decoding="async" class="swiper-slide-image"
+													src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20750'%3E%3C/svg%3E"
+													alt="f9"
+													data-lazy-src="http://goldenbook.site/wp-content/uploads/2023/08/f9.jpg" /><noscript><img
+														width="450" height="750" decoding="async"
+														class="swiper-slide-image"
+														src="wp-content/uploads/2023/08/f9.jpg" alt="f9" /></noscript>
+											</figure>
+										</div>
+										<div class="swiper-slide" role="group" aria-roledescription="slide"
+											aria-label="10 of 10">
+											<figure class="swiper-slide-inner"><img width="450" height="750"
+													decoding="async" class="swiper-slide-image"
+													src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20450%20750'%3E%3C/svg%3E"
+													alt="f10"
+													data-lazy-src="http://goldenbook.site/wp-content/uploads/2023/08/f10.jpg" /><noscript><img
+														width="450" height="750" decoding="async"
+														class="swiper-slide-image"
+														src="wp-content/uploads/2023/08/f10.jpg" alt="f10" /></noscript>
+											</figure>
+										</div>
+									</div>
+									<div class="elementor-swiper-button elementor-swiper-button-prev" role="button"
+										tabindex="0">
+										<i aria-hidden="true" class="eicon-chevron-left"></i>
+									</div>
+									<div class="elementor-swiper-button elementor-swiper-button-next" role="button"
+										tabindex="0">
+										<i aria-hidden="true" class="eicon-chevron-right"></i>
+									</div>
+
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-795cdf3 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle"
+			data-id="795cdf3" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d6752dd"
+					data-id="d6752dd" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-6270299 elementor-widget elementor-widget-heading"
+							data-id="6270299" data-element_type="widget" data-widget_type="heading.default">
+							<div class="elementor-widget-container">
+								<h2 class="elementor-heading-title elementor-size-default">Normalmente, todo esto
+									costaría <span style="color: #ffce81">137,90 dólares</span> pero, asegurando tu cupo
+									ahora, tendrás un acesso à uma condicion especial:</h2>
+							</div>
+						</div>
+						<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-0e68490 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+							data-id="0e68490" data-element_type="section">
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-65de72f"
+									data-id="65de72f" data-element_type="column"
+									data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-144ecba elementor-widget elementor-widget-heading"
+											data-id="144ecba" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">Registrate
+													hoy y asegura:</h2>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-94af988 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+											data-id="94af988" data-element_type="widget"
+											data-widget_type="icon-list.default">
+											<div class="elementor-widget-container">
+												<ul class="elementor-icon-list-items">
+													<li class="elementor-icon-list-item">
+														<span class="elementor-icon-list-icon">
+															<i aria-hidden="true" class="fas fa-check-circle"></i>
+														</span>
+														<span class="elementor-icon-list-text">El golden Book completo
+															con mas de 140 paginas</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-04ea6bf elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+											data-id="04ea6bf" data-element_type="widget"
+											data-widget_type="icon-list.default">
+											<div class="elementor-widget-container">
+												<ul class="elementor-icon-list-items">
+													<li class="elementor-icon-list-item">
+														<span class="elementor-icon-list-icon">
+															<i aria-hidden="true" class="fas fa-check-circle"></i>
+														</span>
+														<span class="elementor-icon-list-text">Soporte individual para
+															alumnos</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-0e8547b elementor-widget elementor-widget-text-editor"
+											data-id="0e8547b" data-element_type="widget"
+											data-widget_type="text-editor.default">
+											<div class="elementor-widget-container">
+												<p class="elementor-heading-title elementor-size-default">de
+													US$<s> 137,90</s></p>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-82fc0f0 elementor-widget elementor-widget-heading"
+											data-id="82fc0f0" data-element_type="widget"
+											data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">Por apenas
+													US$29,90 al contado</h2>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-dc3964e elementor-align-center elementor-widget elementor-widget-button"
+											data-id="dc3964e" data-element_type="widget"
+											data-widget_type="button.default">
+											<div class="elementor-widget-container">
+												<div class="elementor-button-wrapper">
+													<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-grow"
+														href="https://pay.hotmart.com/M83371798C">
+														<span class="elementor-button-content-wrapper">
+															<span class="elementor-button-text">QUIERO EMPEZAR
+																AHORA</span>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-c6cc604 elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+											data-id="c6cc604" data-element_type="widget"
+											data-widget_type="icon-list.default">
+											<div class="elementor-widget-container">
+												<ul class="elementor-icon-list-items">
+													<li class="elementor-icon-list-item">
+														<span class="elementor-icon-list-icon">
+															<i aria-hidden="true" class="fas fa-lock"></i> </span>
+														<span class="elementor-icon-list-text">pago seguro</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-b8c95cf elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle"
+			data-id="b8c95cf" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-057d5f4"
+					data-id="057d5f4" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-0e9f196 elementor-widget elementor-widget-heading"
+							data-id="0e9f196" data-element_type="widget" data-widget_type="heading.default">
+							<div class="elementor-widget-container">
+								<h2 class="elementor-heading-title elementor-size-default">Preguntas frecuentes
+								</h2>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-5559ca6 elementor-widget-mobile__width-initial elementor-widget elementor-widget-toggle"
+							data-id="5559ca6" data-element_type="widget" data-widget_type="toggle.default">
+							<div class="elementor-widget-container">
+								<style>
+									/*! elementor - v3.17.0 - 08-11-2023 */
+									.elementor-toggle {
+										text-align: left
+									}
+
+									.elementor-toggle .elementor-tab-title {
+										font-weight: 700;
+										line-height: 1;
+										margin: 0;
+										padding: 15px;
+										border-bottom: 1px solid #d5d8dc;
+										cursor: pointer;
+										outline: none
+									}
+
+									.elementor-toggle .elementor-tab-title .elementor-toggle-icon {
+										display: inline-block;
+										width: 1em
+									}
+
+									.elementor-toggle .elementor-tab-title .elementor-toggle-icon svg {
+										margin-inline-start: -5px;
+										width: 1em;
+										height: 1em
+									}
+
+									.elementor-toggle .elementor-tab-title .elementor-toggle-icon.elementor-toggle-icon-right {
+										float: right;
+										text-align: right
+									}
+
+									.elementor-toggle .elementor-tab-title .elementor-toggle-icon.elementor-toggle-icon-left {
+										float: left;
+										text-align: left
+									}
+
+									.elementor-toggle .elementor-tab-title .elementor-toggle-icon .elementor-toggle-icon-closed {
+										display: block
+									}
+
+									.elementor-toggle .elementor-tab-title .elementor-toggle-icon .elementor-toggle-icon-opened {
+										display: none
+									}
+
+									.elementor-toggle .elementor-tab-title.elementor-active {
+										border-bottom: none
+									}
+
+									.elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon-closed {
+										display: none
+									}
+
+									.elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon-opened {
+										display: block
+									}
+
+									.elementor-toggle .elementor-tab-content {
+										padding: 15px;
+										border-bottom: 1px solid #d5d8dc;
+										display: none
+									}
+
+									@media (max-width:767px) {
+										.elementor-toggle .elementor-tab-title {
+											padding: 12px
+										}
+
+										.elementor-toggle .elementor-tab-content {
+											padding: 12px 10px
+										}
+									}
+
+									.e-con-inner>.elementor-widget-toggle,
+									.e-con>.elementor-widget-toggle {
+										width: var(--container-widget-width);
+										--flex-grow: var(--container-widget-flex-grow)
+									}
+								</style>
+								<div class="elementor-toggle">
+									<div class="elementor-toggle-item">
+										<div id="elementor-tab-title-8941" class="elementor-tab-title" data-tab="1"
+											role="button" aria-controls="elementor-tab-content-8941"
+											aria-expanded="false">
+											<span class="elementor-toggle-icon elementor-toggle-icon-right"
+												aria-hidden="true">
+												<span class="elementor-toggle-icon-closed"><i
+														class="fas fa-caret-right"></i></span>
+												<span class="elementor-toggle-icon-opened"><i
+														class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+											</span>
+											<a class="elementor-toggle-title" tabindex="0">Por cuanto tiempo tendré
+												acceso al ebook?</a>
+										</div>
+
+										<div id="elementor-tab-content-8941"
+											class="elementor-tab-content elementor-clearfix" data-tab="1" role="region"
+											aria-labelledby="elementor-tab-title-8941">
+											<p>El acceso es vitalicio.</p>
+										</div>
+									</div>
+									<div class="elementor-toggle-item">
+										<div id="elementor-tab-title-8942" class="elementor-tab-title" data-tab="2"
+											role="button" aria-controls="elementor-tab-content-8942"
+											aria-expanded="false">
+											<span class="elementor-toggle-icon elementor-toggle-icon-right"
+												aria-hidden="true">
+												<span class="elementor-toggle-icon-closed"><i
+														class="fas fa-caret-right"></i></span>
+												<span class="elementor-toggle-icon-opened"><i
+														class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+											</span>
+											<a class="elementor-toggle-title" tabindex="0">Como funciona el soporte?</a>
+										</div>
+
+										<div id="elementor-tab-content-8942"
+											class="elementor-tab-content elementor-clearfix" data-tab="2" role="region"
+											aria-labelledby="elementor-tab-title-8942">
+											<p>Es simple, al abrir el ebook vas a encontrar un modulo con el el soporte,
+												basta clicar en el link que vas a entrar en contacto con nuestro
+												suporte.</p>
+										</div>
+									</div>
+									<div class="elementor-toggle-item">
+										<div id="elementor-tab-title-8943" class="elementor-tab-title" data-tab="3"
+											role="button" aria-controls="elementor-tab-content-8943"
+											aria-expanded="false">
+											<span class="elementor-toggle-icon elementor-toggle-icon-right"
+												aria-hidden="true">
+												<span class="elementor-toggle-icon-closed"><i
+														class="fas fa-caret-right"></i></span>
+												<span class="elementor-toggle-icon-opened"><i
+														class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+											</span>
+											<a class="elementor-toggle-title" tabindex="0">Cuales son los métodos de
+												pago?</a>
+										</div>
+
+										<div id="elementor-tab-content-8943"
+											class="elementor-tab-content elementor-clearfix" data-tab="3" role="region"
+											aria-labelledby="elementor-tab-title-8943">
+											<p>Tarjeta de credito y Pay pal.</p>
+										</div>
+									</div>
+									<div class="elementor-toggle-item">
+										<div id="elementor-tab-title-8944" class="elementor-tab-title" data-tab="4"
+											role="button" aria-controls="elementor-tab-content-8944"
+											aria-expanded="false">
+											<span class="elementor-toggle-icon elementor-toggle-icon-right"
+												aria-hidden="true">
+												<span class="elementor-toggle-icon-closed"><i
+														class="fas fa-caret-right"></i></span>
+												<span class="elementor-toggle-icon-opened"><i
+														class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+											</span>
+											<a class="elementor-toggle-title" tabindex="0">No se de nada de Marketing
+												digital, el golden book sirve para mi?</a>
+										</div>
+
+										<div id="elementor-tab-content-8944"
+											class="elementor-tab-content elementor-clearfix" data-tab="4" role="region"
+											aria-labelledby="elementor-tab-title-8944">
+											<p>Si. Este ebook es el unico y mas completo del mercado para ti que no
+												sabes nada de Marketing digital, o hasta tenes alguna familiaridad, pero
+												nunca intentaste o no tuviste resultados expresivos. Voy a darte todo el
+												contenido que a mi me gustaría de haber tenido acceso cuando empece y me
+												tendría hacho ganar dinero mucho mas rápido.</p>
+										</div>
+									</div>
+									<div class="elementor-toggle-item">
+										<div id="elementor-tab-title-8945" class="elementor-tab-title" data-tab="5"
+											role="button" aria-controls="elementor-tab-content-8945"
+											aria-expanded="false">
+											<span class="elementor-toggle-icon elementor-toggle-icon-right"
+												aria-hidden="true">
+												<span class="elementor-toggle-icon-closed"><i
+														class="fas fa-caret-right"></i></span>
+												<span class="elementor-toggle-icon-opened"><i
+														class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+											</span>
+											<a class="elementor-toggle-title" tabindex="0">Voy a precisar invertir para
+												ganar dinero?</a>
+										</div>
+
+										<div id="elementor-tab-content-8945"
+											class="elementor-tab-content elementor-clearfix" data-tab="5" role="region"
+											aria-labelledby="elementor-tab-title-8945">
+											<p>Si. Este ebook es el unico y mas completo del mercado para ti que no
+												sabes nada de Marketing digital, o hasta tenes alguna familiaridad, pero
+												nunca intentaste o no tuviste resultados expresivos. Voy a darte todo el
+												contenido que a mi me gustaría de haber tenido acceso cuando empece y me
+												tendría hacho ganar dinero mucho mas rápido.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section
+			class="elementor-section elementor-top-section elementor-element elementor-element-dc56a57 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle"
+			data-id="dc56a57" data-element_type="section"
+			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-46f95ec"
+					data-id="46f95ec" data-element_type="column">
+					<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-18ecab0 elementor-widget elementor-widget-heading"
+							data-id="18ecab0" data-element_type="widget" data-widget_type="heading.default">
+							<div class="elementor-widget-container">
+								<h2 class="elementor-heading-title elementor-size-default">Términos y Condiciones</h2>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-1acc550 elementor-widget elementor-widget-text-editor"
+							data-id="1acc550" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p>Los productos y servicios vendidos en este sitio no deben interpretarse como una
+									promesa o garantía de resultados.<br /><br /></p>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-16f7705 elementor-widget elementor-widget-text-editor"
+							data-id="16f7705" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p>Su nivel de éxito en el logro de los resultados anunciados utilizando nuestros
+									productos e información depende del tiempo que dedique al programa, las técnicas
+									utilizadas, los diferentes conocimientos y habilidades.<br />Como estos factores
+									difieren entre cada individuo, no podemos garantizar el éxito o el nivel de
+									resultado, ni somos responsables de ninguna de sus acciones.<br /><br /></p>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-1af635b elementor-widget elementor-widget-text-editor"
+							data-id="1af635b" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p>Todas y cada una de las declaraciones prospectivas contenidas en este sitio o en
+									cualquiera de nuestros productos pretenden expresar nuestra opinión sobre los
+									posibles resultados que algunas personas pueden lograr.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<script type="rocketlazyloadscript"
+		src="wp-content/themes/hello-elementor/assets/js/hello-frontend.min8a54.js?ver=1.0.0"
+		id="hello-theme-frontend-js" defer></script>
+	<script src="../player.pandavideo.com.br/api.v2b0fd.js?nowprocket=1&amp;data-no-minify=1&amp;data-no-lazy=1"
+		id="panda-api-js" defer></script>
+	<script
+		src="../player.pandavideo.com.br/player.externalb0fd.js?nowprocket=1&amp;data-no-minify=1&amp;data-no-lazy=1"
+		id="panda-external-api-js" defer></script>
+	<script type="rocketlazyloadscript"
+		src="wp-content/plugins/elementor/assets/js/webpack.runtime.min8864.js?ver=3.17.3"
+		id="elementor-webpack-runtime-js" defer></script>
+	<script type="rocketlazyloadscript"
+		src="wp-content/plugins/elementor/assets/js/frontend-modules.min8864.js?ver=3.17.3"
+		id="elementor-frontend-modules-js" defer></script>
+	<script type="rocketlazyloadscript"
+		src="wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2"
+		id="elementor-waypoints-js" defer></script>
+	<script type="rocketlazyloadscript" src="wp-includes/js/jquery/ui/core.min3f14.js?ver=1.13.2" id="jquery-ui-core-js"
+		defer></script>
+	<script type="rocketlazyloadscript" id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Celular em modo retrato","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Celular em modo paisagem","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Retrato","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Paisagem do tablet","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},
+"version":"3.17.3","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"additional_custom_breakpoints":true,"container":true,"e_swiper_latest":true,"hello-theme-header-footer":true,"landing-pages":true,"e_global_styleguide":true},"urls":{"assets":"http:\/\/goldenbook.site\/wp-content\/plugins\/elementor\/assets\/"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"title","hello_footer_logo_type":"logo"},"post":{"id":9,"title":"Golden%20Book","excerpt":"","featuredImage":false}};
+</script>
+	<script type="rocketlazyloadscript" src="wp-content/plugins/elementor/assets/js/frontend.min8864.js?ver=3.17.3"
+		id="elementor-frontend-js" defer></script>
+	<script>window.lazyLoadOptions = { elements_selector: "img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, callback_loaded: function (element) { if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") { if (element.classList.contains("lazyloaded")) { if (typeof window.jQuery != "undefined") { if (jQuery.fn.fitVids) { jQuery(element).parent().fitVids() } } } } } }; window.addEventListener('LazyLoad::Initialized', function (e) {
+			var lazyLoadInstance = e.detail.instance; if (window.MutationObserver) {
+				var observer = new MutationObserver(function (mutations) {
+					var image_count = 0; var iframe_count = 0; var rocketlazy_count = 0; mutations.forEach(function (mutation) {
+						for (var i = 0; i < mutation.addedNodes.length; i++) {
+							if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') { continue }
+							if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') { continue }
+							images = mutation.addedNodes[i].getElementsByTagName('img'); is_image = mutation.addedNodes[i].tagName == "IMG"; iframes = mutation.addedNodes[i].getElementsByTagName('iframe'); is_iframe = mutation.addedNodes[i].tagName == "IFRAME"; rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload'); image_count += images.length; iframe_count += iframes.length; rocketlazy_count += rocket_lazy.length; if (is_image) { image_count += 1 }
+							if (is_iframe) { iframe_count += 1 }
+						}
+					}); if (image_count > 0 || iframe_count > 0 || rocketlazy_count > 0) { lazyLoadInstance.update() }
+				}); var b = document.getElementsByTagName("body")[0]; var config = { childList: !0, subtree: !0 }; observer.observe(b, config)
+			}
+		}, !1)</script>
+	<script data-no-minify="1" async
+		src="wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script>
+	<script>function lazyLoadThumb(e) { var t = '<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>', a = '<button class="play" aria-label="play Youtube video"></button>'; return t.replace("ID", e) + a } function lazyLoadYoutubeIframe() { var e = document.createElement("iframe"), t = "ID?autoplay=1"; t += 0 === this.parentNode.dataset.query.length ? '' : '&' + this.parentNode.dataset.query; e.setAttribute("src", t.replace("ID", this.parentNode.dataset.src)), e.setAttribute("frameborder", "0"), e.setAttribute("allowfullscreen", "1"), e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"), this.parentNode.parentNode.replaceChild(e, this.parentNode) } document.addEventListener("DOMContentLoaded", function () { var e, t, p, a = document.getElementsByClassName("rll-youtube-player"); for (t = 0; t < a.length; t++)e = document.createElement("div"), e.setAttribute("data-id", a[t].dataset.id), e.setAttribute("data-query", a[t].dataset.query), e.setAttribute("data-src", a[t].dataset.src), e.innerHTML = lazyLoadThumb(a[t].dataset.id), a[t].appendChild(e), p = e.querySelector('.play'), p.onclick = lazyLoadYoutubeIframe });</script>
+	<script>class RocketElementorAnimation { constructor() { this.deviceMode = document.createElement("span"), this.deviceMode.id = "elementor-device-mode", this.deviceMode.setAttribute("class", "elementor-screen-only"), document.body.appendChild(this.deviceMode) } _detectAnimations() { let t = getComputedStyle(this.deviceMode, ":after").content.replace(/"/g, ""); this.animationSettingKeys = this._listAnimationSettingsKeys(t), document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t => { const e = t.getBoundingClientRect(); if (e.bottom >= 0 && e.top <= window.innerHeight) try { this._animateElement(t) } catch (t) { } }) } _animateElement(t) { const e = JSON.parse(t.dataset.settings), i = e._animation_delay || e.animation_delay || 0, n = e[this.animationSettingKeys.find(t => e[t])]; if ("none" === n) return void t.classList.remove("elementor-invisible"); t.classList.remove(n), this.currentAnimation && t.classList.remove(this.currentAnimation), this.currentAnimation = n; let s = setTimeout(() => { t.classList.remove("elementor-invisible"), t.classList.add("animated", n), this._removeAnimationSettings(t, e) }, i); window.addEventListener("rocket-startLoading", function () { clearTimeout(s) }) } _listAnimationSettingsKeys(t = "mobile") { const e = [""]; switch (t) { case "mobile": e.unshift("_mobile"); case "tablet": e.unshift("_tablet"); case "desktop": e.unshift("_desktop") }const i = []; return ["animation", "_animation"].forEach(t => { e.forEach(e => { i.push(t + e) }) }), i } _removeAnimationSettings(t, e) { this._listAnimationSettingsKeys().forEach(t => delete e[t]), t.dataset.settings = JSON.stringify(e) } static run() { const t = new RocketElementorAnimation; requestAnimationFrame(t._detectAnimations.bind(t)) } } document.addEventListener("DOMContentLoaded", RocketElementorAnimation.run);</script>
+</body>
+
+<!-- Mirrored from goldenbook.site/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jan 2024 18:17:41 GMT -->
+
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1700014697 -->
